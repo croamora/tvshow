@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <!--JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <!-- THEME BOOTSTRAP -->
+    <link rel="stylesheet" href="flatly/bootstrap.min.css">
+    
+	
+
+	
+    <!-- FRAMEWORK BOOTSTRAP -->
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+ 
+    <title>Hello, world!</title>
+  </head>
+  <body>
+	<div class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary" style="">
+      <div class="container">
+        <a href="../" class="navbar-brand">FireBase</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          
+        </div>
+      </div>
+    </div>
+	
+	<div class="container" style="margin-top: 80px;">
+	
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-header">
+              <h1 id="forms">Formulario</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="bs-component">
+              <form onsubmit="sendData(event)">
+                <fieldset>
+                  <legend>TV Shows</legend>
+				  <div class="form-group">
+					<label class="col-form-label" for="inputDefault">Title</label>
+					<input type="text" class="form-control" placeholder="Title" id="txtTitle">
+				  </div>
+				  
+				  <div class="form-group">
+					<label class="col-form-label" for="inputDefault">Network</label>
+					<input type="text" class="form-control" placeholder="Network" id="txtNetwork">
+				  </div>
+				  
+				  <div class="form-group">
+					<label class="col-form-label" for="inputDefault">number Of Seasons</label>
+					<input type="number" class="form-control"  id="txtNumberOfSeasons">
+				  </div>
+				  
+				  <div class="form-group">
+					  <div class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input" id="isCurrent" checked="">
+						<label class="custom-control-label" for="isCurrent">isCurrent</label>
+					  </div>				  
+				  </div>
+				  
+				  <div class="form-group">
+                    <label for="exampleSelect1">genres</label>
+                    <select class="form-control" id="genres">
+                      <option value="-1">Seleccione</option>
+                      <option value="terror">Terror</option>
+                      <option value="cc">Ciencia Ficción</option>
+                      <option value="accion">Acción</option>
+                      <option value="comedia">Comedia</option>
+                    </select>
+                  </div>
+				  
+				 <button type="submit" class="btn btn-primary">Enviar</button>
+				 <button type="button" onclick="borrar()" class="btn btn-danger">Borrar</button>
+				 
+              </form>
+            
+          </div>
+          
+        </div>
+	  </div>
+	  
+	  <table class="table table-hover">
+		  <thead>
+			<tr>
+			  <th scope="col">Title</th>
+			  <th scope="col">Network</th>
+			  <th scope="col">Number Of Seasons</th>
+			  <th scope="col">isCurrent</th>
+			  <th scope="col">genres</th>
+			</tr>
+		  </thead>
+		  <tbody id="tableData"> 
+			
+		  </tbody>
+		</table>
+	</div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+    -->
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>
